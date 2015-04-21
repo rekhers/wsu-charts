@@ -1,0 +1,168 @@
+.x.axis path,
+.axis line {
+  fill:none;
+    stroke: gray;
+    stroke-width:2px;
+    shape-rendering: crispEdges;
+    opacity:.5;
+}
+
+.y.axis path,
+.axis line {
+fill:none;
+    stroke: gray;
+    stroke-width:2px;
+    shape-rendering: crispEdges;
+    opacity:.5;
+}
+
+
+.axis text{
+  font-family:"Open Sans";
+  font-size:20;
+}
+
+
+#title{
+  font-family: "Open Sans";
+}
+
+  .county{
+    stroke: #FFF;
+  }
+
+
+.CAGR{
+  font-size: 15px;
+}
+
+.studentLine{
+  white-space: nowrap;
+  display: "inline";
+}
+.studentHeader{
+  font-size:15px;
+  display:"inline";
+}
+
+.studentCount, .percentInc{
+  font-size:15px;
+  color:gray; 
+}
+
+
+.hover{
+  fill:yellow;
+}
+
+.axis{
+  text-anchor: end;
+  fill:gray;
+}
+
+.legend{
+  background-color: blue;
+}
+
+
+#chart{
+  margin-left:15%;
+}
+
+.g{
+  stroke-width:20;
+}
+
+
+.students{
+    font-family:'Garamond';
+    font-size:20px;
+}
+
+
+
+.legend-text{
+  font-family: helvetica neue;
+  margin-left:3%;
+  font-size:20px;
+}
+
+
+.rect{
+  fill-opacity:.01;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: white;
+  color: black;
+  border-radius: 0px;
+  display:block;
+  border:2px solid steelBlue;
+  box-shadow: -2px 2px 2px #888888;
+  font-family: 'Open Sans', Arial, Tahoma, Sans-Serif;
+  font-size: 25px;
+
+}
+
+
+
+#tooltip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: white;
+  color: black;
+  border-radius: 0px;
+  display:block;
+  border:2px solid steelBlue;
+  box-shadow: -2px 2px 2px #888888;
+  font-family: 'Open Sans', Arial, Tahoma, Sans-Serif;
+  font-size: 25px;
+      }
+#tooltip.hidden {
+        display: none;
+      }
+  
+
+/* Creates a small triangle extender for the tooltip */
+/*.d3-tip:after {
+  box-sizing: border-box;
+  display: block;
+  font-size: 40px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+*/
+
+#tooltip {
+        -moz-transition: all 0.15s;
+        -o-transition: all 0.15s;
+        -webkit-transition: all 0.15s;
+        transition: all 0.15s;
+        opacity: 0.90;
+        position: absolute;
+        min-width: 60px;
+        height: auto;
+        padding: 10px;
+        background-color: white;
+        -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+      }
+      #tooltip.hidden {
+        display: none;
+      }
+      #tooltip p {
+        margin: 0;
+        font-family: garamond;
+        font-size: 40px;
+      }

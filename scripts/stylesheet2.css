@@ -1,0 +1,45 @@
+
+.labels{
+	margin-top:30px;
+	margin-bottom: 200px;
+	font-family: "Open Sans"
+}
+
+.bar_text{
+	font-family: "Open Sans";
+	fill: #FFF;
+}
+
+#title{
+	font-family: "Open Sans";	
+}
+
+.rectBars{
+	border: 10px solid black;
+}
+
+.total{
+	fill:black;
+	font-family:"Open Sans";
+}
+
+.x.axis path,
+.axis line {
+	fill:none;
+    stroke: gray;
+    stroke-width:2px;
+    shape-rendering: crispEdges;
+    opacity:.5;
+}
+
+.y.axis path,
+.axis line {
+
+	fill: none;
+}
+
+.axis text {
+	font-family:"Open Sans";
+	font-size: 15px;
+	fill: gray;
+}
