@@ -92,13 +92,11 @@ var color = d3.scale.ordinal()
       
       .on("mouseenter", function(d){
         var name = d.name;
-        console.log(d.name)
      		d3.select(this)
         	.style("fill", "steelBlue");
 
         d3.selectAll(".labels")
           .style("fill", function(d){
-            console.log(d);
             if(d == name){
               return "steelBlue";
             }

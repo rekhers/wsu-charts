@@ -2,7 +2,7 @@
 
 var margin = {top: 350, right: 200, bottom: 90, left: 220};
  width = 600,
- height = 3000;
+ height = 800;
 
 var x = d3.scale.linear()
     .range([0, width/2]);
@@ -11,12 +11,15 @@ var y = d3.scale.ordinal();
 
 var chart = d3.select(".chartDiv3")
 	.append("svg")
-    .attr("width", "3000px");
+    .attr("width", "3000px")
+    .attr("height", "400px");
 
 var color = d3.scale.ordinal()
     .range(["#89182b", "#aa1f37", "#bb625d"]);
 
 d3.csv("scripts/data_file.csv", function(error, data) {
+
+  console.log(data);
 
 	// data.forEach(function(d){
 	// 	d.money = color.domain().map(function(source){
@@ -34,20 +37,19 @@ d3.csv("scripts/data_file.csv", function(error, data) {
 
 	// });
 
-var barHeight = 20;
-var holdArray = [];
+var barHeight = 18;
 
-var stringInfo = "";
 
-	data.forEach(function(d, i){
-		stringInfo = d.Source + "  " + d.Amount;
-		holdArray[i] = stringInfo;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-
-	});
 
 
   x.domain([0, d3.max(data, function(d) { return +d.Amount; })]);
   y.domain(data.map(function(d){return d.Source}));
+
+
+  data.forEach(function(d){
+      console.log(d.Source);
+      console.log(d.Amount);
+    })
 
 
 
@@ -59,7 +61,7 @@ var stringInfo = "";
   bar.append("rect")
       .attr("width", function(d) { 
       	return x(d.Amount); })
-      .attr("height", 20)
+      .attr("height", barHeight)
       .attr("class", "rectBars3")
       .style("fill", function(d){
       	return color(d.Source);
@@ -69,7 +71,7 @@ var stringInfo = "";
 var legend = chart.selectAll(".legend")
       .data(color.domain().slice())
       .enter().append("g")
-      .attr("transform", function(d, i) { return "translate(10," + i*25 +")"; })
+      .attr("transform", function(d, i) { return "translate(10," + i*20 +")"; })
       .attr("class", "legend");
 
       
