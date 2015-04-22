@@ -1,8 +1,8 @@
 (function(){
 
-var margin = {top: 100, right: 200, bottom: 90, left: 220};
- width = 400,
- height = 900;
+var margin = {top: 350, right: 200, bottom: 90, left: 220};
+ width = 600,
+ height = 3000;
 
 var x = d3.scale.linear()
     .range([0, width/2]);
@@ -11,7 +11,7 @@ var y = d3.scale.ordinal();
 
 var chart = d3.select(".chartDiv3")
 	.append("svg")
-    .attr("width", 500);
+    .attr("width", "3000px");
 
 var color = d3.scale.ordinal()
     .range(["#89182b", "#aa1f37", "#bb625d"]);
@@ -20,7 +20,7 @@ d3.csv("scripts/data_file.csv", function(error, data) {
 
 	// data.forEach(function(d){
 	// 	d.money = color.domain().map(function(source){
-	// 		return {source:d.Source, amount = +d.Amount }
+	// 		return {source:d.Source, amsount = +d.Amount }
 	// 	})
 	// })
 
@@ -34,7 +34,7 @@ d3.csv("scripts/data_file.csv", function(error, data) {
 
 	// });
 
-var barHeight = (height-20)/data.length;
+var barHeight = 20;
 var holdArray = [];
 
 var stringInfo = "";
