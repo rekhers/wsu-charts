@@ -67,7 +67,7 @@ var stringInfo = "";
 
 
 var legend = chart.selectAll(".legend")
-      .data(color.domain().slice().reverse())
+      .data(color.domain().slice())
       .enter().append("g")
       .attr("transform", function(d, i) { return "translate(10," + i*25 +")"; })
       .attr("class", "legend");

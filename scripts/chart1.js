@@ -1,5 +1,5 @@
 (function(){
-var margin = {top: 50, right: 120, bottom: 90, left: 80},
+var margin = {top: 200, right: 120, bottom: 90, left: 80},
     width = 1200 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom; 
 
@@ -10,8 +10,8 @@ var y = d3.scale.linear()
     .rangeRound([height, 0]);
 
 var color = d3.scale.ordinal()
-    .range(["#7F0014", "gray", "#ac1b37", "#b48484"]);
-
+    .range(["#7F0014", "gray", "#ac1b37", "#b48484"])
+;
 var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom");
